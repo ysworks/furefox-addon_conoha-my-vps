@@ -1,0 +1,280 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+body, div, ul, form {
+    margin: 0;
+    padding: 0;
+    color: #222526;
+    font-family: メイリオ,Meiryo,ヒラギノ角ゴ Pro W3,"Hiragino Kaku Gothic Pro",ＭＳ Ｐゴシック,Arial,Verdana,sans-serif;
+    font-size: 12px;
+}
+
+a {
+    color: #999;
+}
+a[href] {
+    color: #12B8D7;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.vps-list {
+    display: block;
+}
+
+.vps-list__unit {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #DADADA;
+    border-radius: 3px;
+}
+
+.vps-list__unit__name-tag--active,
+.vps-list__unit__name-tag--stop,
+.vps-list__unit__name-tag--unknown {
+    display: block;
+    height: 19px;
+    padding-left: 23px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.vps-list__unit__name-tag--active {
+    background-image: url("./image/icon-active.png");
+}
+
+.vps-list__unit__name-tag--stop {
+    background-image: url("./image/icon-stop.png");
+}
+
+.vps-list__unit__name-tag--unknown {
+    background-image: url("./image/icon-unknown.gif");
+}
+
+.vps-list__unit__action {
+    display: block;
+}
+
+    .vps-list__unit__action > li {
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: left top;
+        padding-left: 20px;
+        margin-right: 5px;
+    }
+
+.vps-list__unit__action__console {
+    background-image: url("./image/icon-console.gif");
+}
+
+.vps-list__unit__action__setting {
+    background-image: url("./image/icon-setting.png");
+}
+
+.footer {
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+.error__auth {
+	text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #DADADA;
+    border-radius: 3px;
+}
+.error__auth>div{
+	margin-bottom: 4px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    border: 1px solid #DADADA;
+    padding: 5px 9px;
+    height: 30px;
+    line-height: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	outline: medium none;
+    opacity: 1;
+}
+
+input[type="button"], input[type="submit"] {
+	background: #12B8D7 none repeat scroll 0%;
+	width: 100px;
+	padding: 10px;
+	text-align: center;
+	color: #FFF;
+	border: medium none;
+	font-size: 11px;
+	font-family: メイリオ,Meiryo,ヒラギノ角ゴ Pro W3,"Hiragino Kaku Gothic Pro",ＭＳ Ｐゴシック,Arial,Verdana,sans-serif;
+	cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background: #0E9AB2 none repeat scroll 0%;
+}
+
+
+.loader {
+    height: 75px;
+    position: relative;
+}
+
+.loader__large {
+    font-size: 11px;
+    text-indent: -99999px;
+    margin: 2px;
+    position: relative;
+    background: #fff;
+    animation: load_color 6s infinite ease;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    border: 5px solid #999;
+}
+
+.loader__large:before, .loader__large:after {
+    position: absolute;
+    content: '';
+    background: transparent;
+    border-radius: 50%;
+    transform: rotate(-135deg);
+    width: 30px;
+    height: 30px;
+    top: -6px;
+    left: -6px;
+}
+
+.loader__large:before {
+    animation: load_rotate 2s infinite ease 1.5s;
+    border-top: 10px solid white;
+    border-right: 10px solid white;
+    border-bottom: 10px solid rgba(255, 255, 255, 0);
+    border-left: 10px solid rgba(255, 255, 255, 0);
+}
+
+.loader__large:after {
+    animation: load_rotate 2s infinite ease;
+    border-top: 10px solid rgba(255, 255, 255, 0);
+    border-right: 10px solid rgba(255, 255, 255, 0);
+    border-bottom: 10px solid white;
+    border-left: 10px solid white;
+}
+
+.loader__base {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.loader__center--large {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1100;
+    margin: -15px 0 0 -15px;
+}
+
+@-webkit-keyframes load_rotate {
+    0% {
+        transform: rotate(-135deg);
+    }
+
+    100% {
+        transform: rotate(225deg);
+    }
+}
+
+@keyframes load_rotate {
+    0% {
+        transform: rotate(-135deg);
+    }
+
+    100% {
+        transform: rotate(225deg);
+    }
+}
+
+@-webkit-keyframes load_color {
+    0% {
+        border-color: #12b8d7;
+    }
+
+    25% {
+        border-color: #12b8d7;
+    }
+
+    28% {
+        border-color: #6ab80e;
+    }
+
+    59% {
+        border-color: #6ab80e;
+    }
+
+    62% {
+        border-color: #979797;
+    }
+
+    94% {
+        border-color: #979797;
+    }
+
+    97% {
+        border-color: #12b8d7;
+    }
+
+    100% {
+        border-color: #12b8d7;
+    }
+}
+
+@keyframes load_color {
+    0% {
+        border-color: #12b8d7;
+    }
+
+    25% {
+        border-color: #12b8d7;
+    }
+
+    28% {
+        border-color: #6ab80e;
+    }
+
+    59% {
+        border-color: #6ab80e;
+    }
+
+    62% {
+        border-color: #979797;
+    }
+
+    94% {
+        border-color: #979797;
+    }
+
+    97% {
+        border-color: #12b8d7;
+    }
+
+    100% {
+        border-color: #12b8d7;
+    }
+}

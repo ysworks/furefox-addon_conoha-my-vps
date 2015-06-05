@@ -1,0 +1,18 @@
+﻿body {
+    background-image: url("./image/bg_conoha.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.vps-list__unit {
+    border-width: 0;
+    background-color: rgba(255, 255, 255, 0.7 );
+}
+
+
+.error__auth {
+    border-width: 0;
+    background-color: rgba(255, 255, 255, 0.7 );
+}

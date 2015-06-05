@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./panel.css">
+</head>
+<body>
+    <form id="js__error__auth" style="display: none;">
+        <div class="error__auth">
+            <div><input type="text" id="js__input__api-user-name" placeholder="APIユーザー名"></div>
+            <div><input type="password" autocomplete="off" id="js__input__api-password" placeholder="APIパスワード"></div>
+            <input type="submit" id="js__input__submit" value="API認証">
+        </div>
+    </form>
+
+    <ul class="vps-list" id="js__vm-list" style="display: none;">
+        
+    </ul>
+
+    <div id="js__loader" class="loader">
+        <div class="loader__base loader__center--large">
+            <div class="loader__large">Loading...</div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <a href="http://www.conoha.jp" target="_blank"><img src="./image/logo-conoha.png" alt="ConoHa" title="ConoHa"></a>
+    </footer>
+
+    <script type="text/html" id="tmpl__vm-list">
+        <li class="vps-list__unit" data-uuid="<%=uuid%>" style="display: none;">
+            <div class="
+                 <% if (vm_state == 'active') { %>
+                    vps-list__unit__name-tag--active
+                 <% } else { %>
+                    vps-list__unit__name-tag--stop
+                 <% } %>
+            ">
+                <%=nameTag%>
+            </div>
+            <ul class="vps-list__unit__action">
+                
+                <li class="vps-list__unit__action__setting"><a href="https://manage.conoha.jp/VPS/Detail/tyo1/<%=uuid%>/" target="_blank">設定内容</a></li>
+                <li class="vps-list__unit__action__console"><a class="js__vnc" target="_blank">VNC</a></li>
+                <li class="vps-list__unit__action__console"><a class="js__serial" target="_blank">シリアル</a></li>
+            </ul>
+        </li>
+    </script>
+
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/micro-template.js"></script>
+    <script src="./js/panel.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+{
+    "name": "conoha_my_vps",
+    "title": "ConoHa My VPS",
+    "id": "jid1-Wvdfo0PCE678bw",
+    "description": "ConoHaのVPS一覧表示プラグインです。VPSの状態表示、コンソール起動、コントロールパネルのVPS設定画面表示が行えます。\nあらかじめコントロールパネルのAPIメニューからAPIユーザーを作成してください。",
+    "author": "GMO Internet, Inc.",
+    "license": "MPL-2.0",
+    "version": "0.1",
+    "preferences": [
+        {
+            "name": "conohamode",
+            "title": "このはモード",
+            "description": "Use ConoHa mode",
+            "type": "bool",
+            "value": false
+        },
+        {
+            "name": "tyo1",
+            "title": "東京リージョン",
+            "description": "Use Tokyo Region",
+            "type": "bool",
+            "value": true
+        },
+        {
+            "name": "sin1",
+            "title": "シンガポールリージョン",
+            "description": "Use Singapore Region",
+            "type": "bool",
+            "value": true
+        },
+        {
+            "name": "sjc1",
+            "title": "サンノゼリージョン",
+            "description": "Use San Jose Region",
+            "type": "bool",
+            "value": true
+        }
+
+    ]
+}
