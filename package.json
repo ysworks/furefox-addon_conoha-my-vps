@@ -5,7 +5,7 @@
     "description": "ConoHaのVPS一覧表示プラグインです。VPSの状態表示、コンソール起動、コントロールパネルのVPS設定画面表示が行えます。\nあらかじめコントロールパネルのAPIメニューからAPIユーザーを作成してください。",
     "author": "GMO Internet, Inc.",
     "license": "MPL-2.0",
-    "version": "0.1",
+    "version": "0.2",
     "preferences": [
         {
             "name": "conohamode",

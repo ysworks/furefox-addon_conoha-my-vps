@@ -42,8 +42,10 @@ addon.port.on('setConsoleUrl', function (data) {
 // 認証エラー表示
 addon.port.on('showAuthError', function (data) {
     $('#js__loader').hide();
-    $('#js__input__api-user-name').val(data.apiUserName);
-    $('#js__input__api-password').val(data.apiPassword);
+    if (data){
+        $('#js__input__api-user-name').val(data.apiUserName);
+        $('#js__input__api-password').val(data.apiPassword);
+    }
     $('#js__error__auth').show();
     addon.postMessage({ type: 'resize', value: $(window).height() });
 })
